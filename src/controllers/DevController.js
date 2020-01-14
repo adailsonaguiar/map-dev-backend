@@ -1,5 +1,6 @@
 const Dev = require('../models/Dev');
 const axios = require('axios');
+const parseStringAsArray = require('../utils/parseStringAsArray');
 
 module.exports = {
   async store(req, res) {
@@ -10,7 +11,7 @@ module.exports = {
         `https://api.github.com/users/${github_username}`
       );
       const { name = login, avatar_url, bio } = user_github.data;
-      const techsArray = techs.split(',').map(tech => tech.trim());
+      const techsArray = parseStringAsArray(techs);
       const location = {
         type: 'Point',
         coordinates: [longitude, latitude]
@@ -30,5 +31,17 @@ module.exports = {
   async index(req, res) {
     const devs = await Dev.find();
     return res.json(devs);
+  },
+
+  async destroy(req, res) {
+    const { github_username } = req.body;
+    let dev = await Dev.findOne({ github_username });
+    if (dev) {
+      dev = await Dev.findOneAndDelete({
+        github_username
+      });
+      return res.json(dev);
+    }
+    return res.json({ title: 'Error', message: 'User not found!' });
   }
 };
