@@ -35,7 +35,7 @@ module.exports = config;
 ```json
 {
   "github_username": "adailsonaguiar",
-  "techs": "angular, React",
+  "stacks": "angular, React",
   "latitude": -10.2092426,
   "longitude": -48.328996
 }
@@ -47,8 +47,8 @@ module.exports = config;
 
 **3.** localhost:3333/search (GET)
 
-> Consulta realizada através das **querys** (latitude, longitude, techs): **http://localhost:3333/search?latitude=-10.2111874&longitude=-48.3265592&techs=angular**
-> (**techs** são strings separadas por vírgulas. **Ex: "angular, reactJs"**).
+> Consulta realizada através das **querys** (latitude, longitude, stacks): **http://localhost:3333/search?latitude=-10.2111874&longitude=-48.3265592&stacks=angular**
+> (**stacks** são strings separadas por vírgulas. **Ex: "angular, reactJs"**).
 
 **4.** localhost:3333/remove (DELETE)
 
@@ -57,5 +57,21 @@ module.exports = config;
 ```json
 {
   "github_username": "adailsonaguiar"
+}
+```
+
+**5.** localhost:3333/update (PUT)
+
+> Exemplo de requisição enviada no **body**.
+
+```json
+{
+  "github_username": "adailsffonaguiar",
+  "bio": "Minha nova bio salva!",
+  "name": "Deonilde Aguiar",
+  "latitude": -48.328996,
+  "longitude": -10.2092426,
+  "stacks": "Vue.js, Svelt, Laravel",
+  "avatar_url": ""
 }
 ```

@@ -3,10 +3,10 @@ const parseStringAsArray = require('../utils/parseStringAsArray');
 
 module.exports = {
   async index(req, res) {
-    const { latitude, longitude, techs } = req.query;
-    const techsArray = parseStringAsArray(techs);
+    const { latitude, longitude, stacks } = req.query;
+    const stacksArray = parseStringAsArray(stacks);
     const devs = await Dev.find({
-      stacks: { $in: techsArray },
+      stacks: { $in: stacksArray },
       location: {
         $near: {
           $geometry: {
