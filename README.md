@@ -12,7 +12,7 @@ Clone a aplicação através do comando:
 
 ### Conectar ao seu cluster no mongodb Atlas:
 
-Crie um arquivo na pasta `config` do app com o nome `mongo-connection.js`.
+Crie um arquivo na pasta `/src/config` do app com o nome `mongo-connection.js`.
 
 ```javascript
 const config = {
