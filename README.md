@@ -17,7 +17,7 @@ Crie o arquivo **`.env`** na **pasta raiz** da aplicação.
 ```javascript
 API_URL=http://localhost:3333/
 
-MONGO_URL=mongodb+srv://deploy:web-deploy123@cluster0-ftlu8.mongodb.net/test?retryWrites=true&w=majority
+MONGO_URL=mongodb+srv://<SEU_USUARIO>:<SUA_SENHA>@cluster0-ftlu8.mongodb.net/test?retryWrites=true&w=majority
 ```
 
 ### Rotas
