@@ -12,18 +12,12 @@ Clone a aplicação através do comando:
 
 ### Conectar ao seu cluster no mongodb Atlas:
 
-Crie um arquivo na pasta `/src/config` do app com o nome `mongo-connection.js`.
+Crie um arquivo na pasta `.env` na **pasta raiz** da aplicação.
 
 ```javascript
-const config = {
-  url:
-    'mongodb+srv://<user>:<passworc>@cluster0-	ftlu8.mongodb.net/map-dev?retryWrites=true&w=majority',
-  rules: {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-  }
-};
-module.exports = config;
+API_URL=http://localhost:3333/
+
+MONGO_URL=mongodb+srv://deploy:web-deploy123@cluster0-ftlu8.mongodb.net/test?retryWrites=true&w=majority
 ```
 
 ### Rotas
