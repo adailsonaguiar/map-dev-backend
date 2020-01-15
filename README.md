@@ -12,7 +12,7 @@ Clone a aplicação através do comando:
 
 ### Conectar ao seu cluster no mongodb Atlas:
 
-Crie um arquivo na pasta `.env` na **pasta raiz** da aplicação.
+Crie o arquivo **`.env`** na **pasta raiz** da aplicação.
 
 ```javascript
 API_URL=http://localhost:3333/
